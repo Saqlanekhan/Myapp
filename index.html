@@ -56,6 +56,7 @@
 if(checklocalstorage==null){
 
   localStorage.setItem('user-details',JSON.stringify([signUpDetails]));
+  alert('successfully registered!! Now you can login')
 }else{
   objArra=JSON.parse(checklocalstorage)
   let checkExists=objArra.find(n=>n.email==signUpDetails.email);
@@ -64,11 +65,12 @@ alert('user already exists!!')
   }else{
     objArra.push(signUpDetails);
   localStorage.setItem('user-details',JSON.stringify(objArra));
+    alert('successfully registered!! Now you can login')
   }
 
 }
 
-alert('successfully registered!! Now you can login')
+
                 
     }
 </script>
